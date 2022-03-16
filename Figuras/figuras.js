@@ -31,7 +31,7 @@ const cr = document.getElementById("circle-result");
 function squarePerimeter(){
     x = document.getElementById("square-input");
     x = parseInt(x.value);
-    if (x != Number){
+    if (x < 0){
         alert("¡Introduce un número válido!")
         return;
     }
@@ -45,7 +45,7 @@ function squarePerimeter(){
 function squareArea(){
     x = document.getElementById("square-input");
     x = parseInt(x.value);
-    if (x != Number || x < 0){
+    if (x < 0){
         alert("¡Introduce un número válido!")
         return;
     }
@@ -65,7 +65,7 @@ function trianglePerimeter(){
     y = parseInt(y.value);
     let z =  document.getElementById("triangle-input4");
     z = parseInt(z.value)
-    if(x != Number || x < 0){
+    if(x < 0 || y < 0 || z < 0){
         alert("¡Escribe un número válido!")
         return;
     }
@@ -77,7 +77,19 @@ function trianglePerimeter(){
 }
 
 function triangleArea(){
-
+    x = document.getElementById("triangle-input1");
+    x = parseInt(x.value);
+    let y = document.getElementById("triangle-input2");
+    y = parseInt(y.value);
+    if(x < 0 || y < 0){
+        alert("¡Escribe un número válido!")
+        return;
+    }
+    else{
+        const result = (x * y) / 2;
+        tr.innerHTML = "El área de tu triángulo es: " + result + " cm^2";
+        return;
+    }
 }
 
 //Código del Círculo
