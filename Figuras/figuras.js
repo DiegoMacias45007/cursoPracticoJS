@@ -32,7 +32,7 @@ const cr = document.getElementById("circle-result");
 function squarePerimeter(){
     x = document.getElementById("square-input");
     x = parseInt(x.value);
-    if (x < 0){
+    if (x < 0 || isNaN(x)){
         alert("¡Introduce un número válido!")
         return;
     }
@@ -46,7 +46,7 @@ function squarePerimeter(){
 function squareArea(){
     x = document.getElementById("square-input");
     x = parseInt(x.value);
-    if (x < 0){
+    if (x < 0 || isNaN(x)){
         alert("¡Introduce un número válido!")
         return;
     }
@@ -66,7 +66,7 @@ function trianglePerimeter(){
     y = parseInt(y.value);
     let z =  document.getElementById("triangle-input4");
     z = parseInt(z.value)
-    if(x < 0 || y < 0 || z < 0){
+    if(x < 0 || y < 0 || z < 0 || isNaN(x) || isNaN(y) || isNaN(z)){
         alert("¡Escribe un número válido!")
         return;
     }
@@ -82,7 +82,7 @@ function triangleArea(){
     x = parseInt(x.value);
     let y = document.getElementById("triangle-input2");
     y = parseInt(y.value);
-    if(x < 0 || y < 0){
+    if(x < 0 || y < 0 || isNaN(x) || isNaN(y)){
         alert("¡Escribe un número válido!")
         return;
     }
@@ -98,7 +98,7 @@ function triangleArea(){
 function circlePerimeter(){
     x = document.getElementById("circle-input");
     x = x.value;
-    if(x < 0){
+    if(x < 0 || isNaN(x)){
         alert("¡Escribe un número válido!");
         return;
     }
@@ -112,7 +112,7 @@ function circlePerimeter(){
 function circleArea(){
     x = document.getElementById("circle-input");
     x = x.value;
-    if(x < 0){
+    if(x < 0 || isNaN(x)){
         alert("¡Escribe un número válido!");
         return;
     }
