@@ -25,68 +25,41 @@ let ca = document.getElementById("circle-area");
 ca.addEventListener("click", circleArea);
 
 const cr = document.getElementById("circle-result");
+
 //Código del Cuadrado
 
-squarePerimeter(){
-    x = getElementById("square-input");
+function squarePerimeter(){
+    x = document.getElementById("square-input");
+    x = parseInt(x.value);
     const result = x * 4;
+    sr.innerHTML = "El perímetro de tu cuadrado es: " + result + " cm";
+    return;
+}
+
+function squareArea(){
+    x = document.getElementById("square-input");
+    x = parseInt(x.value);
+    const result = x ** 2;
+    sr.innerHTML = "El área de tu cuadrado es: " + result + " cm^2";
+    return;
 }
 
 //Código del Triángulo
 
-console.group("Triángulo");
+function trianglePerimeter(){
 
-let ladoTriangulo1 = 6;
-let ladoTriangulo2 = 6;
-let ladoTriangulo3 = 4;
-const baseTriangulo = ladoTriangulo3;
+}
 
-console.log(
-    "Los lados del triángulo son: " 
-    + ladoTriangulo1 
-    + " cm, " 
-    + ladoTriangulo2 
-    + " cm y " 
-    + ladoTriangulo3 
-    + " cm."
-    );
+function triangleArea(){
 
-let alturaTriangulo = 5.5;
-
-console.log("La altura del triángulo es: " + alturaTriangulo + " cm");
-
-const perimetroTriangulo = (lado1, lado2, lado3) => lado1 + lado2 + lado3;
-    
-console.log("El perímetro del triángulo es: " + perimetroTriangulo(ladoTriangulo1, ladoTriangulo2, ladoTriangulo3) + " cm");
-
-const areaTriangulo = (base, altura) => (base * altura) / 2;
-
-console.log("El área del triángulo es: " + areaTriangulo(baseTriangulo, alturaTriangulo).toFixed(4) + " cm^2")
-
-console.groupEnd();
+}
 
 //Código del Círculo
 
-console.group("Círculo");
+function circlePerimeter(){
 
-let radioCirculo = 4;
+}
 
-console.log("El radio del círculo es: " + radioCirculo + " cm");
+function circleArea(){
 
-let diametroCirculo = radioCirculo * 2;
-
-console.log("El diámetro del círculo es: " + diametroCirculo + " cm");
-
-
-console.log("Pi es: " + PI);
-
-const perimetroCirculo = (diametro) => diametro * PI;
-
-console.log("La circunferencia del círculo es de: " + perimetroCirculo(diametroCirculo).toFixed(4) + " cm");
-
-const areaCirculo = (radio) => PI * (radio ** 2);
-
-console.log("El área del círculo es: " + areaCirculo(radioCirculo).toFixed(4) + " cm^2");
-
-
-console.groupEnd();
+}
