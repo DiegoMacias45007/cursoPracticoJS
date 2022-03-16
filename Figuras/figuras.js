@@ -1,4 +1,5 @@
 let x;
+let result;
 const PI = Math.PI;
 
 // Agregando los botones a JS y sus Event Listeners, además del <p> para mostrar el resultado
@@ -36,7 +37,7 @@ function squarePerimeter(){
         return;
     }
     else{
-        const result = x * 4;
+        result = x * 4;
         sr.innerHTML = "El perímetro de tu cuadrado es: " + result + " cm";
         return;
     }
@@ -50,7 +51,7 @@ function squareArea(){
         return;
     }
     else{
-        const result = x ** 2;
+        result = x ** 2;
         sr.innerHTML = "El área de tu cuadrado es: " + result + " cm^2";
         return;
     }
@@ -70,7 +71,7 @@ function trianglePerimeter(){
         return;
     }
     else{
-        const result = x + y + z;
+        result = x + y + z;
         tr.innerHTML = "El perímetro de tu triángulo es: " + result + " cm";
         return;
     }
@@ -86,7 +87,7 @@ function triangleArea(){
         return;
     }
     else{
-        const result = (x * y) / 2;
+        result = (x * y) / 2;
         tr.innerHTML = "El área de tu triángulo es: " + result + " cm^2";
         return;
     }
@@ -95,9 +96,28 @@ function triangleArea(){
 //Código del Círculo
 
 function circlePerimeter(){
-
+    x = document.getElementById("circle-input");
+    x = x.value;
+    if(x < 0){
+        alert("¡Escribe un número válido!");
+        return;
+    }
+    else{
+        result = (x * 2) * PI;
+        cr.innerHTML = "La circunferencia de tu círculo es: " + result.toFixed(4) + " cm";
+        return;
+    }
 }
 
 function circleArea(){
-
+    x = document.getElementById("circle-input");
+    x = x.value;
+    if(x < 0){
+        alert("¡Escribe un número válido!");
+        return;
+    }
+    else{
+        result = (x ** 2) * PI;
+        cr.innerHTML = "El área de tu círculo es: " + result.toFixed(4) + " cm^2";
+    }
 }
