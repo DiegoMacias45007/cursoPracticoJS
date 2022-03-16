@@ -4,11 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My primer acercamiento a un projecto completo Frontend (HTML, CSS, JS y Responsive)">
+    <meta name="robots" content="index, follow">
     <title>Figuras Geométricas | Curso Práctico JS</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <h1>Figuras Geométricas</h1>
-
+    <header>
+            <section class="title-container">
+                <img clsass="title__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmuUR5HlBjRFdsT9k0hrkN_m7aRCPJQNAtQ&usqp=CAU" alt="Figuras Geométricas" title="Figuras Geométricas">
+                <h1 class="title__text">FIGURAS GEOMÉTRICAS</h1>
+            </section>
+    </header>
+    <main>
+        <section class="main-container">
+            <section class="subtitle-container">
+                <h2 class="subtitle__text">Este es el primer taller del curso práctico de JavaScript</h2>
+                <p class="subtitle__body">Es mi primer proyecto en el cual mezclo HTML, CSS y JS :D</p>
+            </section>
+            <section class="figure-container">
+                <div class="square__figure"></div>
+                <h3 class="figure__title">Cuadrado</h3>
+                <p class="figure__body">¿Cuánto mide un lado de tu cuadrado?</p>
+                <input type="number" class="number-input" id="square-input" placeholder="Lado">
+                <button class="primary-button" id="square-perimeter">Calcula el perímetro</button>
+                <button class="primary-button" id="square-area">Calcula el área</button>
+                <p id="square-result" class="figure__result"></p>
+            </section>
+            <section class="figure-container">
+                <div class="triangle__figure"></div>
+                <h3 class="figure__title">Tríangulo</h3>
+                <p class="figure__body">¿Cuánto mide cada lado de tu triángulo?</p>
+                <div class="triangle-input-container">
+                    <input type="number" class="number-input" id="triangle-input1" placeholder="Base">
+                    <input type="number" class="number-input" id="triangle-input2" placeholder="Altura">
+                    <input type="number" class="number-input" id="triangle-input3" placeholder="Lado 1">
+                    <input type="number" class="number-input" id="triangle-input 4" placeholder="Lado 2">
+                </div>
+                <button class="primary-button" id="triangle-perimeter">Calcula el perímetro</button>
+                <button class="primary-button" id="triangle-area">Calcula el área</button>
+                <p id="triangle-result" class="figure__result"></p>
+            </section>
+            <section class="figure-container figure-container--center">
+                <div class="circle__figure"></div>
+                <h3 class="figure__title">Círculo</h3>
+                <p class="figure__body">¿Cuánto mide el radio de tu círculo?</p>
+                <input type="number" class="number-input" id="circle-input" placeholder="Radio">
+                <button class="primary-button" id="circle-perimeter">Calcula el perímetro</button>
+                <button class="primary-button" id="circle-area">Calcula el área</button>
+                <p id="circle-result" class="figure__result"></p>
+            </section>
+        </section>
+    </main>
 
     <script src="./figuras.js"></script>
 </body>
