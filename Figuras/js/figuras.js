@@ -93,6 +93,24 @@ function triangleArea(){
     }
 }
 
+function triangleHeight(){
+    x = document.getElementById("triangle-input1");
+    x = x.value;
+    let y = document.getElementById("triangle-input3");
+    y = y.value;
+    z = document.getElementById("triangle-input4");
+    z = z.value;
+    if (y === z && x != y){
+        let result = Math.sqrt( ( (x / 2) ** 2 + y ** 2 ) );
+        tr.innerHTML = "La altura de tu triángulo isósceles es: " + result + " cm";
+        return;
+    }
+    else{
+        alert("¡Tu triángulo no es isósceles!");
+        return
+    }
+}
+
 //Código del Círculo
 
 function circlePerimeter(){
