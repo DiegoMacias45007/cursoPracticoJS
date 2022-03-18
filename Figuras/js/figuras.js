@@ -52,7 +52,7 @@ function squareArea(){
     }
     else{
         result = x ** 2;
-        sr.innerHTML = "El área de tu cuadrado es: " + result + " cm^2";
+        sr.innerHTML = "El área de tu cuadrado es: " + result + " cm" + "2".sup();
         return;
     }
 }
@@ -88,7 +88,7 @@ function triangleArea(){
     }
     else{
         result = (x * y) / 2;
-        tr.innerHTML = "El área de tu triángulo es: " + result + " cm^2";
+        tr.innerHTML = "El área de tu triángulo es: " + result + " cm" + "2".sup();
         return;
     }
 }
@@ -136,6 +136,6 @@ function circleArea(){
     }
     else{
         result = (x ** 2) * PI;
-        cr.innerHTML = "El área de tu círculo es: " + result.toFixed(4) + " cm^2";
+        cr.innerHTML = "El área de tu círculo es: " + result.toFixed(4) + " cm" + "2".sup();
     }
 }
