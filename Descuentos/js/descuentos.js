@@ -24,6 +24,6 @@ const discountOperation = function(price, discount, coupon){
     }
     let savings = price - result;
     itemResult.innerHTML = "Tu producto cuesta: " + result + " pesos ";
-    savingsResult.innerHTML = "Ahorraste " + savings + " pesos";
+    savingsResult.innerHTML = "Ahorraste: " + savings + " pesos";
     return;
 }
