@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clase de descuentos y porcentajes, HTML, CSS y JS">
+    <meta name="robots" content="index, follow">
+    <title>Descuentos | Curso Práctico de JavaScript</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header--title">Porcentajes y Descuentos</h1>
+        <p class="header--subtitle">Este es el segundo taller del curso práctico de JavaScript</p>
+    </header>
+    <main>
+        <section class="main-container">
+            <h2 class="main--title">¡Hola! Soy Yeyo Virtual y te voy a ayudar a calcular el descuento del producto que me pidas, ¡hasta con cupones!</h2>
+            <p class="main--body">Primero necesito que me brindes los datos necesarios:</p>
+            <form action="#">
+                <label class="input--labels" for="itemPrice">¿Cuánto cuesta tu producto?</label>
+                <input class="input--field" type="number" placeholder="Precio de tu producto" id="itemPrice" title="Precio de tu producto">
+
+                <label class="input--labels" for="itemDiscount">¿Qué descuento tiene?</label>
+                <input class="input--field" type="number" placeholder="Descuento" id="itemDiscount" title="Descuento">
+
+                <label class="input--labels" for="itemCoupon">¿Tienes algún cupón?</label>
+                <select class="input--field" name="Coupons" id="itemCoupon">
+                <option value="0">No tengo</option>
+                <option value="10">-10%</option>
+                <option value="25">-25%</option>
+                <option value="50">-50%</option>
+                </select>
+
+                <button class="primary-button" type="button" onclick="discountOperation()">¡Obten tu precio final!</button>
+            </form>
+            <p class="input--result" id="itemResult"></p>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="./js/descuentos.js"></script>
+</body>
+</html>
