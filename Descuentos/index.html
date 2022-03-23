@@ -11,8 +11,13 @@
 </head>
 <body>
     <header>
-        <h1 class="header--title">Porcentajes y Descuentos</h1>
-        <p class="header--subtitle">Este es el segundo taller del curso práctico de JavaScript</p>
+        <nav class="nav-container">
+            
+        </nav>
+        <section class="header-container">
+            <h1 class="header--title">Porcentajes y Descuentos</h1>
+            <p class="header--subtitle">Este es el segundo taller del curso práctico de JavaScript</p>
+        </section>
     </header>
     <main>
         <section class="main-container">
@@ -33,9 +38,10 @@
                 <option value="50">-50%</option>
                 </select>
 
-                <button class="primary-button" type="button" onclick="discountOperation()">¡Obten tu precio final!</button>
+                <button class="primary-button" type="button" onclick="showPrice()">¡Obten tu precio final!</button>
             </form>
             <p class="input--result" id="itemResult"></p>
+            <p class="input--result" id="savingsResult"></p>
         </section>
     </main>
     <footer>
