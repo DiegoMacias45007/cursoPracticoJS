@@ -29,6 +29,7 @@ function mean(){
         total ++;
     }
     result = sum / total;
+    meanResult.style.display = "block";
     meanResult.innerHTML = "El promedio de tu lista de número es: " + result;
     return;
 }
@@ -44,6 +45,7 @@ function median(){
     } else {
         result = list[halfLength];
     }
+    medianResult.style.display = "block"
     medianResult.innerHTML = "La mediana de tu lista es: " + result;
     return;
 }
@@ -61,7 +63,7 @@ function mode(){
     )
     const array = Object.entries(listCount).sort((a , b) => a[1] - b[1]);
     result = array[array.length - 1];
-    console.log(result);
+    modeResult.style.display = "block";
     modeResult.innerHTML = "La moda de tu lista es: " + result[0] + " que apareció " + result[1] + " veces";
     return;
 }

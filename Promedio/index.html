@@ -20,19 +20,20 @@
         <section class="main-container">
             <h2 class="main--title">¡Hola! Soy YeyiRobot y te voy a ayudar a calcular el promedio, la mediana y la moda de la lista de objetos que me pidas</h2>
             <p class="main--body">Solo necesito que me brindes los datos necesarios:</p>
-        </section>
-        <form action="#" class="form-container">
-            <label class="input--label" for="itemArray">Escribe los números que quieras cuantas veces quieras para tu lista:</label>
-            <input class="input--field" type="number" name="Número" id="itemArray" placeholder="Escribe cada número">
-            <button type="button" class="secondary-button" onclick="addNumberToArray()" id="arrayButton">Agregar</button>
+        
+            <form action="#" class="form-container">
+                <label class="input--label" for="itemArray">Escribe los números que quieras cuantas veces quieras para tu lista:</label>
+                <input class="input--field" type="number" name="Número" id="itemArray" placeholder="Escribe cada número">
+                <button type="button" class="secondary-button" onclick="addNumberToArray()" id="arrayButton">Agregar</button>  
 
-            <button type="button" class="primary-button" onclick="mean()">¡Calcula el promedio!</button>
-            <button type="button" class="primary-button" onclick="median()">¡Calcula la mediana!</button>
-            <button type="button" class="primary-button" onclick="mode()">¡Calcula la moda!</button>
-            <p class="form--result" id="meanResult"></p>
-            <p class="form--result" id="medianResult"></p>
-            <p class="form--result" id="modeResult"></p>
-        </form>
+                <button type="button" class="primary-button" onclick="mean()">¡Calcula el promedio!</button>
+                <button type="button" class="primary-button" onclick="median()">¡Calcula la mediana!</button>
+                <button type="button" class="primary-button button__center" onclick="mode()">¡Calcula la moda!</button>
+                <p class="form--result" id="meanResult"></p>
+                <p class="form--result" id="medianResult"></p>
+                <p class="form--result" id="modeResult"></p>
+            </form>
+        </section>
     </main>
     <script src="./js/index.js"></script>
 </body>
