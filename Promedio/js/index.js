@@ -1,24 +1,31 @@
 // Promedio
 const itemArray = document.getElementById("itemArray");
-const list1 = [];
+const meanList = [];
+const medianList = [];
+const modeList = [];
+const meanResult = document.getElementById("meanResult");
+const medianResult = document.getElementById("medianResult");
+const modeResult = document.getElementById("modeResult");
 
 let x;
-let sum1 = 0;
+let sum = 0;
 let total= 0;
 let result;
 
-function promedio(){
-    for (let i of list1){
-        sum1 += i;
+function mean(){
+    for (let i of meanList){
+        sum += i;
         total ++;
     }
-    result = sum1 / total;
-    return result;
+    result = sum / total;
+    meanResult.innerHTML = "El promedio de tu lista de número es: " + result;
+    return;
 }
 
 function addNumberToArray(){
-    x = itemArray.value;
-    list1.push(x);
-    itemArray.style.value === null; 
+    x = parseInt(itemArray.value);
+    meanList.push(x);
+    itemArray.value = null; 
+    console.log(meanList);
     return;
 }
