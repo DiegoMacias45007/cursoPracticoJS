@@ -12,19 +12,24 @@ let total= 0;
 let result;
 
 function addNumberToArray(){
-    x = itemArray.value.split(", ");
-    list.push(x);
-    itemArray.value = null; 
-    return;
+    x = parseInt(itemArray.value);
+    if(isNaN(x)){
+        alert("¡Escribe un número válido!")
+        return;
+    }else{
+        list.push(x);
+        itemArray.value = null; 
+        return;
+    }
 }
 
-function mean(iterable){
-    let array = iterable.split(", ");
-    for (let i of array){
+function mean(){
+    for (let i of list){
         sum += i;
         total ++;
     }
     result = sum / total;
+    meanResult.style.display = "block";
     meanResult.innerHTML = "El promedio de tu lista de número es: " + result;
     return;
 }
@@ -40,10 +45,25 @@ function median(){
     } else {
         result = list[halfLength];
     }
+    medianResult.style.display = "block"
     medianResult.innerHTML = "La mediana de tu lista es: " + result;
     return;
 }
 
 function mode(){
-
+    const listCount = {};
+    list.map(
+        function(element){
+            if (listCount[element]){
+                listCount[element] += 1;
+            }else{
+                listCount[element] = 1;
+            }
+        }
+    )
+    const array = Object.entries(listCount).sort((a , b) => a[1] - b[1]);
+    result = array[array.length - 1];
+    modeResult.style.display = "block";
+    modeResult.innerHTML = "La moda de tu lista es: " + result[0] + " que apareció " + result[1] + " veces";
+    return;
 }
