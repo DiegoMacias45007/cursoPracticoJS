@@ -12,14 +12,15 @@ let total= 0;
 let result;
 
 function addNumberToArray(){
-    x = parseInt(itemArray.value);
+    x = itemArray.value.split(", ");
     list.push(x);
     itemArray.value = null; 
     return;
 }
 
-function mean(){
-    for (let i of list){
+function mean(iterable){
+    let array = iterable.split(", ");
+    for (let i of array){
         sum += i;
         total ++;
     }
@@ -44,5 +45,5 @@ function median(){
 }
 
 function mode(){
-    
+
 }

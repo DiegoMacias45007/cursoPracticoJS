@@ -23,11 +23,12 @@
         </section>
         <form action="#">
             <label for="itemArray">Escribe los números que quieras cuantas veces quieras para tu lista:</label>
-            <input type="number" name="Número" id="itemArray" placeholder="Escribe tu número">
+            <input type="text" name="Número" id="itemArray" placeholder="Escribe tu número">
             <button type="button" onclick="addNumberToArray()" id="arrayButton">Agregar</button>
 
             <button type="button" class="primary-button" onclick="mean()">¡Calcula el promedio!</button>
             <button type="button" class="primary-button" onclick="median()">¡Calcula la mediana!</button>
+            <button type="button" class="primary-button" onclick="mode()">¡Calcula la moda!</button>
             <p id="meanResult"></p>
             <p id="medianResult"></p>
             <p id="modeResult"></p>
