@@ -6,4 +6,28 @@
 
 html{
     font-size: 62.5%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header-container{
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: 15vh;
+}
+
+.header--title{
+    margin-block-end: 8px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 2rem;
+    color: darkorchid;
+}
+
+.header--subtitle{
+    font-size: 1.6rem;
+    text-align: center;
 }

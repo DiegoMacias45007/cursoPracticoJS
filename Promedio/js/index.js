@@ -13,9 +13,14 @@ let result;
 
 function addNumberToArray(){
     x = parseInt(itemArray.value);
-    list.push(x);
-    itemArray.value = null; 
-    return;
+    if(isNaN(x)){
+        alert("¡Escribe un número válido!")
+        return;
+    }else{
+        list.push(x);
+        itemArray.value = null; 
+        return;
+    }
 }
 
 function mean(){
@@ -44,5 +49,19 @@ function median(){
 }
 
 function mode(){
-    
+    const listCount = {};
+    list.map(
+        function(element){
+            if (listCount[element]){
+                listCount[element] += 1;
+            }else{
+                listCount[element] = 1;
+            }
+        }
+    )
+    const array = Object.entries(listCount).sort((a , b) => a[1] - b[1]);
+    result = array[array.length - 1];
+    console.log(result);
+    modeResult.innerHTML = "La moda de tu lista es: " + result[0] + " que apareció " + result[1] + " veces";
+    return;
 }
