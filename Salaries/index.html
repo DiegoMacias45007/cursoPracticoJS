@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="El taller final del curso práctico de JS">
+    <title>Análisis Salarial</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Análisis Salarial</h1>
+            <p>Este es el último taller del curso práctico de JS</p>
+        </section>
+    </header>
+    <main>
+        <section>
+            <h2>¡Hola de nuevo! Soy YeyiRobot</h2>
+            <p>El día de hoy te ayudaré a realizar un análisis salarial de los países que quieras, solo bríndame unos datos:</p>
+        </section>
+        <div>
+            <label for="countryInout">¿Cómo se llama tu país</label>
+            <input type="text" id="countryInput" name="countryInput" placeholder="País">
+            <button onclick="addCountry()">¡Empezemos!</button>
+        </div>
+        <form action="#" id="formContainer" class="form-container">
+            <label for="nameInput">¿Cómo se llama la persona que quieres agregar?</label>
+            <input type="text" name="nameInput" id="nameInput" placeholder="Nombre">
+            <label for="salaryInput">¿Cuánto dinero gana?</label>
+            <input type="number" name="salaryInput" id="salaryInput" placeholder="Salario">
+
+            <button type="button" onclick="addToCountry()">¡Agregar!</button>
+            <button type="button" onclick="salaryMean()">¡Calcula la media salarial!</button>
+            <button type="button" onclick="salaryMedian()">¡Calcula la mediana salarial!</button>
+            <button type="button" onclick="salaryMode()">¡Calcula la moda salarial!</button>
+        </form>
+        <p id="meanResult"></p>
+        <p id="medianResult"></p>
+        <p id="modeResult"></p>
+        <p id="top10Result"></p>
+    </main>
+    <script src="./js/index.js"></script>
+    <script src="./js/analisis.js"></script>
+</body>
+</html>

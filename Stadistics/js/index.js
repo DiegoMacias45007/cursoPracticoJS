@@ -1,3 +1,5 @@
+//Declaración de variables universales
+
 const itemArray = document.getElementById("itemArray");
 const list = [];
 const meanResult = document.getElementById("meanResult");
@@ -11,6 +13,8 @@ let sum = 0;
 let total= 0;
 let result;
 
+//Función para agregar números del usuario al array
+
 function addNumberToArray(){
     x = parseInt(itemArray.value);
     if(isNaN(x)){
@@ -23,6 +27,8 @@ function addNumberToArray(){
     }
 }
 
+//Media
+
 function mean(){
     for (let i of list){
         sum += i;
@@ -33,6 +39,8 @@ function mean(){
     meanResult.innerHTML = "El promedio de tu lista de número es: " + result;
     return;
 }
+
+//Mediana
 
 function median(){
     list.sort(compareNumbers);
@@ -49,6 +57,8 @@ function median(){
     medianResult.innerHTML = "La mediana de tu lista es: " + result;
     return;
 }
+
+//Moda
 
 function mode(){
     const listCount = {};
